@@ -49,10 +49,12 @@ let codCopas = document.createElement('a');
             if (ano > 2020) {
                 console.log('Em: ' + ano + ' : vai ter copa.')
                 copa += 'Em ' + ano + ': vai ter Copa.\n';
+        //innerText deve usar \n para pular a linha. Com textContent e innerHTML nao pula a linha
                 buttonCopa.insertAdjacentElement("afterEnd", codCopas);
             }
+
         buttonCopa.insertAdjacentHTML("afterEnd", copa);      
-        //Com innerText usar \n para pular a linha. Com textContent e innerHTML nao pula a linha
+        buttonCopa.insertAdjacentElement("beforeEnd", codCopas);
     } 
     
 //Anos de Olimpiada
@@ -88,8 +90,10 @@ function anodeOlimpiadas(){
         console.log('Em: ' + ano + ' : vai ter Olimpiadas.');
         olimpiadas += 'Em ' + ano + ': Interrupção devido a Covid-19.\n';
         buttonOlimpiadas.insertAdjacentElement('afterEnd', codOlimpiadas);
-    }   
-    buttonOlimpiadas.insertAdjacentHTML("afterEnd", olimpiadas);   
+    } 
+
+    buttonOlimpiadas.insertAdjacentHTML("afterEnd", olimpiadas);
+    buttonOlimpiadas.insertAdjacentElement("beforeEnd", codOlimpiadas);
 }
 
 //Tabuada
@@ -111,9 +115,9 @@ let buttonTabuada2 = document.createElement('button');
             codTabuada.setAttribute('href', "https://github.com/improgram/casadocodigo/blob/master/Capitulo5/039Topico5.6-Tabuada.html");
             codTabuada.setAttribute('target', "_blank");
 
+        buttonTabuada.insertAdjacentElement('afterEnd', codTabuada , buttonTabuada2);
+        buttonTabuada.insertAdjacentElement("afterEnd", buttonTabuada2);   
         buttonTabuada.insertAdjacentHTML("afterEnd", resposta);
-        buttonTabuada.insertAdjacentElement("afterEnd", buttonTabuada2);
-        buttonTabuada.insertAdjacentElement('afterEnd', codTabuada);
     }
 
 //beforebegin = Antes do element
@@ -161,6 +165,19 @@ let buttonIdade = document.getElementById('mediaIdade');
 function mediaIdade(){
     console.log('media de idade')
 
+    let familiares = parseInt(prompt('Quantos familiares ?'));
+    let somarIdades = 0;
+    let numeroInicio = 1;
+    while (numeroInicio <= familiares) {
+        let idade = parseInt(prompt('Digite a idade '));
+            
+        somarIdades = somarIdades + idade;
+        numeroInicio++
+    }
+
+    let mediaIdade = somarIdades / familiares
+    console.log('Media idade dos familiares: ' + Math.round(mediaIdade));
+
     let codIdade = document.createElement('a');
         codIdade.text = '\n Abrir o Codigo no GitHub';
         codIdade.setAttribute('href', "https://github.com/improgram/casadocodigo/blob/master/Capitulo5/042Topico5.9.html");
@@ -168,7 +185,7 @@ function mediaIdade(){
 
     //buttonIdade.insertAdjacentHTML("beforeEnd", );
     //buttonIdade.insertAdjacentElement("beforeEnd", );
-    buttonIdade.insertAdjacentElement("beforeEnd", codIdade);
+    buttonIdade.insertAdjacentElement("afterEnd", codIdade);
 }
 
 //Acertar Numero pensado
