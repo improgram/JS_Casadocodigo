@@ -33,7 +33,7 @@ header {
 }
 
 .menu li img {
-    width: 50%;
+    width: 20%; /* Tamanho da foto no menu superior fixo */
 }
 
 /*
@@ -178,9 +178,9 @@ header {
     width: 380px;
     height: 180px;
     background-size: cover;
-    background-image: url("https://pixabay.com/pt/photos/bloco-de-notas-papel-nota-263217/");
-    /*https://pixabay.com/pt/illustrations/pra%C3%A7a-mosaico-fundo-geom%C3%A9trico-2703542/*/
-    /*https://pixabay.com/pt/vectors/quadrados-arredondados-abstract-1769674/*/
+    
+    /*background-image: url("https://pixabay.com/pt/vectors/quadrados-arredondados-abstract-1769674/");
+    /*https://pixabay.com/pt/illustrations/pra%C3%A7a-mosaico-fundo-geom%C3%A9trico-2703542/ */
     /**/
 }
 
