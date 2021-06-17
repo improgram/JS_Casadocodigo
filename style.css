@@ -27,13 +27,13 @@ header {
     list-style: none;
     display: flex; /*menu lado a lado */
     justify-content: space-between; /*Utiliza todo espaço disponivel*/
-    align-items: center;
-    font-size: clamp(0.3em, 0.8em + 1vw, 4em) /* Valores min, desejavel e max */
+    /*align-items: center;*/
+    font-size: clamp(0.3em, 0.8em + 1vw, 5em) /* Valores min, desejavel e max */
     
 }
 
 .menu li img {
-    width: 20%; /* Tamanho da foto no menu superior fixo */
+    width: 19%; /* Tamanho da foto no menu superior fixo */
 }
 
 /*
@@ -66,7 +66,7 @@ header {
     /* background: url("https://cdn.pixabay.com/photo/2018/05/17/15/24/armillar-ball-3408811__340.jpg") center; */
     /* background: url("https://cdn.pixabay.com/photo/2017/10/20/01/06/north-star-2869817_960_720.jpg") no-repeat center;*/
     /*background: url("https://cdn.pixabay.com/photo/2016/04/02/19/40/moon-1303512__340.png") center;*/
-    background-size: cover;
+    background-size: contain;
 }
 
 #intro {
@@ -88,7 +88,7 @@ header {
     color: rgb(250, 250, 248);
     font-size: 20px;
     border: 1px solid rgb(183, 179, 199);
-    border-radius: 6px;
+    border-radius: 12px;
     /*padding: 6px; /* espaço interno do botao */
     cursor: pointer;
     transition: all 0.5s;
@@ -139,15 +139,19 @@ header {
     width: 380px;
     height: 180px;
     background-image: url("https://onlympics.com.br/wp-content/uploads/2019/01/Onlympics-jogos-olimpicos-1200x554.png");
-    background-size: cover;
+    background-size: contain; /*imagem tamanho certo para a caixa*/
+    text-transform: uppercase;
+    font-size: 32px;
 }
 
 #tabuada {
     width: 380px;
     height: 180px;
     background-image: url("https://geniodamatematica.com.br/wp-content/uploads/2019/04/multiplicacao-tabela-de-pitagoras.png");
-    background-size: cover;
+    background-size: contain;
     color: rgb(0, 0, 158);
+    text-transform: uppercase;
+    font-size: 46px;
 }
 
 #combustiveis {
